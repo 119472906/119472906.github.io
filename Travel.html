@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>My Travels</title>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+#container {
+  overflow: hidden;
+  width: 800px;
+  height: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 5em;
+  border: solid thin white;
+}
+
+#imgs {
+  display: block;
+  padding: 0;
+  width: 200%;
+}
+
+#imgs li {
+  padding-right: 10px;
+  display: inline-block;
+ *display:inline;
+}
+
+#imgs img {
+  width: 160px;
+  height: 120px;
+}
+
+.title {
+  display: block;
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: grey;
+}
+
+#navpanel{
+	top:8.3em;
+	left:0em; 
+
+	width: 19em;
+	height: 35.65em;
+
+	background-color: #87B6E0;
+	border-right: solid thin black;
+
+	padding-left: 1em;
+	padding-top: 1em;
+	position: absolute;
+	}
+	
+#sidepanel{
+	top: 0em;
+	left:0em;
+	
+	width: 20em;
+	height: 8em;
+	
+	background-color: #739ABC;
+	border-bottom: solid thick black;
+
+	
+	position: absolute;
+	}
+	
+#content{
+	top: 7em;
+	left: 20em;
+
+	width: 73.99em;
+	height: 36.95em;
+
+ 	background-color: #bdd5ea;
+	
+
+	position: absolute;
+
+	padding-left: 2em;
+	padding-top: 1em;
+	}
+
+#banner{
+	top: 0em;
+	left: 20em;
+
+	width:75.99em;
+	height:7em;
+
+ 	background-color: #C8887D;
+	border-bottom: solid thick black;
+
+	text-align:center;
+	text-transform: uppercase;
+	padding-top: 1em;
+
+	position: absolute;
+	}
+
+ul{
+	list-style-type: none;
+	border: thin solid black;
+	margin: 0;
+	padding: 0;
+	width: 18em;
+	background-color: #87B6E0;
+	}
+
+li a{
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+	}
+
+/* Change the link color on hover */
+
+li a:hover {
+	background-color: #555;
+	color: white;
+	}
+	
+hr{
+	width: 70em;
+	color: white;
+	thickness: 0.1em;
+	}
+	
+p {
+	margin-top: -1em;
+	}
+		
+</style>
+
+</head>
+
+<body>
+
+<div id="content">
+	
+	<h3> Family Travels....</h3>
+	
+	<p>
+		Throughout the years I have travelled to many parts of Europe with my 
+		family. France would be the one w have returned to many times as it 
+		suited us better then any other country. With this in hand it didn’t 
+		stop us from exploring other parts of the world. As a family we have
+		visited France, Italy, Spain, England and Amsterdam. 
+	</p>
+	
+	<hr />
+	
+	<h3> Travels With Friends....</h3>
+	
+	<p>
+		I also travelled with my friends on a few occasions. I first went to 
+		Bulgaria for a week with my childhood friend when I was in 2nd year. 
+		They had a house out there, so we had free accommodation. It was a 
+		very exciting trip as it was my first time flying on my own. My next 
+		trip with my friends was for our 6th year holiday. We went to Santa 
+		Ponsa which is an island just off of Spain. 
+	</p>
+	
+	<hr />
+	
+	<h3> Future Travels....</h3>
+	
+	<p>
+		For my future travels I have IOS, Greece booked for two weeks in 
+		June/July with my group of friends. I also am going to Maastricht, 
+		Netherlands to visits my friends as he is studying there. Lastly, I 
+		have many hopes for traveling once I’m finished college such as 
+		Canada, Australia and many other countries.  
+	</p>
+
+<div class="jquery-script-center">
+<div class="jquery-script-clear"></div>
+</div>
+<div id="container"> <!--<span class="title">jQuery ImageScroll</span>-->
+  <ol id="imgs">
+    <li><img src="https://photos.mandarinoriental.com/is/image/MandarinOriental/paris-2017-home?$MO_masthead-property-mobile$" alt="" /></li>
+    <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEWF8xmNfxxXAV4MLnBcXW2d2rBI79qBVYgtAdyAiCDW5vGhY-" alt="" /></li>
+    <li><img src="https://i2-prod.mirror.co.uk/incoming/article8095208.ece/ALTERNATES/s615/Magaluf.jpg" alt="" /></li>
+    <li><img src="https://www.greeka.com/photos/cyclades/ios/hero/ios-island-1920.jpg" alt="" /></li>
+    <li><img src="https://lp-cms-production.imgix.net/2019-06/65830387.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4" alt="" /></li>
+    <li><img src="https://www.expatica.com/app/uploads/sites/3/2014/05/shutterstock_1153213027-1200x675.jpg" alt="" /></li>
+    <li><img src="https://cdn.britannica.com/s:700x500/25/178125-050-4AA6ED25/Mount-Assiniboine-Canada-Alberta.jpg" alt="" /></li>
+  </ol>
+  <!--<span class="title"></span>--> </div>
+<div id="controler"> </div>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script type="text/javascript" src="ImageScroll.js"></script> 
+<script type="text/javascript">
+
+  $('#imgs').imageScroll({
+    orientation:"left",
+    speed:600,
+    interval:1000,
+    hoverPause:true,
+    callback:function(){
+      var ordinal = $(this).find("img").first().attr("src");
+      $(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+    }
+  });
+
+  </script>
+  
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+	<div id="sidepanel"></div>
+
+	<div id="banner">
+	
+		<h1>
+			<u>My Travels</u>
+		</h1>
+		
+	</div>
+
+
+	<div id="navpanel">
+		
+		<font size="+3">
+		<b>Navigation Panel</b><br />
+		</font>
+		
+		<ul>
+			<li><a href="Homepage.html" title="Home">Home</a></li>
+		</ul>
+
+
+		<font size="+3">
+		<b>Curriculum Vitae</b><br />
+		</font>		
+		
+	    <ul>
+			<li><a href="CV.html" title="Personal Details">Personal Details</a></li>
+			<li><a href="Education.html" title="Education">Education</a></li>
+			<li><a href="Work.html" title="Work">Work Experience</a></li>
+		</ul>
+
+		
+		<font size="+3">
+		<b>My Interests</b><br />
+		</font>	
+		
+		<ul>
+			<li><a href="Sports.html" title="Sports">My Sports</a></li>
+			<li><a href="Travel.html" title="Travel">My Travels</a></li>
+		</ul>
+		
+		
+		
+		<font size="+3">
+		<b>Consulting</b><br />
+		</font>
+		
+		<ul>
+			<li><a href="ConsultingMain.html" title="Consulting">Consulting Home</a></li>
+			<li><a href="Hyperautomation.html" title="Consulting">Hyperautomation</a></li>
+			<li><a href="Multiexperience.html" title="Consulting">Multiexperience</a></li>
+			<li><a href="ConsultingMain.html" title="Consulting">Distributed Cloud</a></li>
+			<li><a href="Ebus1.html" title="Payment">Services</a></li>
+		</ul>
+		
+	</div>
+
+
+</body>
+</html>
